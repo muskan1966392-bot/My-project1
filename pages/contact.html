@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - ALBERTO</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0d0f12;color:#fff;font-family:'Poppins',sans-serif}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:20px 60px;background:#0d0f12;border-bottom:1px solid #222}
+  nav h1{font-family:'Playfair Display';letter-spacing:3px;font-size:24px}
+  nav h1 span{color:#c9a86a}
+  nav a{color:#aaa;text-decoration:none;margin-left:30px;font-size:14px;letter-spacing:1px;transition:0.3s}
+  nav a:hover,nav a.active{color:#c9a86a}
+  
+  .contact-section{padding:80px 60px;display:flex;gap:60px;align-items:flex-start}
+  .left{flex:1}
+  .left h2{font-family:'Playfair Display';font-size:48px;margin-bottom:15px}
+  .left h2 span{color:#c9a86a;font-style:italic}
+  .left p{color:#888;line-height:1.8;margin-bottom:30px;max-width:450px}
+  .info-box{display:flex;gap:15px;margin-bottom:20px;align-items:center}
+  .icon{width:45px;height:45px;border:1px solid #c9a86a;display:flex;align-items:center;justify-content:center;border-radius:50%;color:#c9a86a}
+
+  .right{flex:1;background:#15181c;padding:40px;border:1px solid #222;border-radius:12px}
+  .right h3{font-family:'Playfair Display';margin-bottom:25px;font-size:22px}
+  input, textarea{width:100%;background:#0d0f12;border:1px solid #333;padding:14px 18px;border-radius:8px;color:#fff;margin-bottom:20px;outline:none;transition:0.3s}
+  input:focus, textarea:focus{border-color:#c9a86a}
+  textarea{height:120px;resize:none}
+  button{width:100%;padding:14px;background:linear-gradient(90deg,#c9a86a,#a47e3a);border:none;border-radius:8px;color:#000;font-weight:600;letter-spacing:1px;cursor:pointer;transition:0.3s}
+  button:hover{opacity:0.9;transform:translateY(-2px)}
+</style>
+</head>
+<body>
+
+<nav>
+   <div class="logo">
+            <img src="../images/logo.jpg" alt="Alberto Logo" style="height: 40px; vertical-align: middle;">
+            <span>ALBERTO</span>
+        </div>
+
+  <div>
+    <a href="../index.html">HOME</a>
+    <a href="collection.html">COLLECTION</a>
+    <a href="services.html">SERVICES</a>
+    <a href="about.html">ABOUT</a>
+    
+    <a href="contact.html" class="active">CONTACT</a>
+    <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+   
+  </div>
+</nav>
+
+<div class="contact-section">
+  <div class="left">
+    <h2>Get in <span>Touch</span></h2>
+    <p>Have a question about our timepieces? Our concierge team is available to assist you with any inquiries.</p>
+    
+    <div class="info-box"><div class="icon">📍</div><div>Karachi, Pakistan - ALBERTO Showroom</div></div>
+    <div class="info-box"><div class="icon">📧</div><div>support@alberto.com</div></div>
+    <div class="info-box"><div class="icon">📞</div><div>+92 300 1234567</div></div>
+  </div>
+
+  <div class="right">
+    <h3>Send a Message</h3>
+    <form onsubmit="sendMsg(event)">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="msg" placeholder="Your Message" required></textarea>
+      <button type="submit">SEND MESSAGE</button>
+    </form>
+  </div>
+</div>
+
+<script>
+function sendMsg(e){
+  e.preventDefault();
+  let name = document.getElementById('name').value;
+  alert(name + " has been added! We will contact you soon.");
+  e.target.reset();
+}
+</script>
+<script src="script.js"></script>
+    <footer class="luxury-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>ALBERTO</h4>
+                <p>Creating world-class Swiss timepieces defined by unmatched precision, elegance, and timeless luxury.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="collection.html">Collection</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="cart.html"></a>Cart</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Client Care</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Concierge</a></li>
+                    <li><a href="#">Warranty & Repairs</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <p>Stay updated with our newest limited releases and exclusive collections.</p>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ALBERTO Luxury Watches. All Rights Reserved.</p>
+        </div>
+    </footer>
+     <style>
+        /* Footer Custom Styling (Agar aap inline/internal add karna chahein) */
+        .luxury-footer {
+            background-color: #0d0d0d;
+            color: #d4d4d4;
+            padding: 60px 40px 20px 40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-top: 1px solid #222;
+        }
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #222;
+        }
+        .footer-col h4 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .footer-col p, .footer-col ul {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-col ul li a:hover {
+            color: #d4af37; /* Luxury Gold Accent */
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 0.85rem;
+            color: #777;
+        }
+    </style>
+</body>
+</html>

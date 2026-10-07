@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Alberto Watches</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Alberto <span>Watches</span></a>
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#collection">Collection</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <div class="hamburger" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Content Section -->
+    <section class="container" style="padding: 80px 0;">
+        <div class="section-title">
+            <h2>The Heritage of Alberto</h2>
+            <p>Crafting excellence and precision since establishment</p>
+        </div>
+        <div style="max-width: 800px; margin: 0 auto; color: #9ca3af; font-size: 18px; line-height: 1.8;">
+            <p style="margin-bottom: 20px;">Alberto Watches was born out of an unwavering passion for horology and refined aesthetics. Every single timepiece we create is a testament to meticulous craftsmanship, blending traditional watchmaking heritage with contemporary architecture.</p>
+            <p style="margin-bottom: 20px;">Our commitment to luxury means we only source the finest materials—from surgical-grade stainless steel and sapphire crystal to genuine hand-stitched leather. We believe that a watch does not merely tell time; it tells your story.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Alberto Watches. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

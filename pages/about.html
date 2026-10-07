@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | ALBERTO</title>
+    <style>
+        body { background-color: #0b0b0b; color: #ffffff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; background-color: #111111; padding: 20px 50px; border-bottom: 1px solid #222; position: sticky; top: 0; z-index: 1000; }
+        .logo { color: #d4af37; font-size: 24px; font-weight: bold; letter-spacing: 3px; text-transform: uppercase; }
+        .nav-links { list-style: none; display: flex; gap: 25px; margin: 0; padding: 0; }
+        .nav-links a { color: #ffffff; text-decoration: none; font-size: 14px; letter-spacing: 1.5px; text-transform: uppercase; transition: color 0.3s ease; }
+        .nav-links a:hover, .nav-links a.active { color: #d4af37; }
+        .about-container { max-width: 900px; margin: 60px auto; padding: 0 20px; text-align: center; }
+        .page-subtitle { color: #d4af37; font-size: 13px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 15px; }
+        .page-title { font-size: 42px; font-weight: 300; letter-spacing: 2px; margin-bottom: 30px; color: #ffffff; }
+        .about-text { color: #999999; font-size: 16px; line-height: 1.8; margin-bottom: 40px; letter-spacing: 0.5px; }
+        .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; margin-top: 60px; text-align: left; }
+        .value-card { background: #141414; border: 1px solid #222; padding: 30px; border-radius: 6px; }
+        .value-card h3 { color: #d4af37; font-size: 18px; margin-top: 0; margin-bottom: 15px; letter-spacing: 1px; }
+        .value-card p { color: #888888; font-size: 14px; line-height: 1.6; margin: 0; }
+        footer { text-align: center; padding: 30px; background: #080808; color: #666; font-size: 13px; border-top: 1px solid #1a1a1a; letter-spacing: 1px; margin-top: 80px; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../images/logo.jpg" alt="Alberto Logo" style="height: 40px; vertical-align: middle;">
+            <span>ALBERTO</span>
+        </div>
+      
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="collection.html">Collection</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+    </nav>
+
+    <div class="about-container">
+        <span class="page-subtitle">Our Heritage</span>
+        <h1 class="page-title">Redefining Time Through Excellence</h1>
+        <p class="about-text">
+            Founded on the principles of precision, luxury, and unmatched craftsmanship, ALBERTO is more than just a watch brand—it is a symbol of legacy. Every timepiece we curate embodies a meticulous blend of traditional horology and modern aesthetic sophistication.
+        </p>
+        <div class="values-grid">
+            <div class="value-card">
+                <h3>Uncompromising Quality</h3>
+                <p>We source only the finest materials, ensuring durability that stands the test of time.</p>
+            </div>
+            <div class="value-card">
+                <h3>Timeless Aesthetics</h3>
+                <p>Our designs reject fleeting trends in favor of classic, minimalist elegance.</p>
+            </div>
+        </div>
+    </div>
+
+        <footer class="luxury-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>ALBERTO</h4>
+                <p>Creating world-class Swiss timepieces defined by unmatched precision, elegance, and timeless luxury.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="collection.html">Collection</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="cart.html"></a>Cart</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Client Care</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Concierge</a></li>
+                    <li><a href="#">Warranty & Repairs</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <p>Stay updated with our newest limited releases and exclusive collections.</p>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ALBERTO Luxury Watches. All Rights Reserved.</p>
+        </div>
+    </footer>
+<script src="script.js"></script>
+
+ <style>
+        /* Footer Custom Styling (Agar aap inline/internal add karna chahein) */
+        .luxury-footer {
+            background-color: #0d0d0d;
+            color: #d4d4d4;
+            padding: 60px 40px 20px 40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-top: 1px solid #222;
+        }
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #222;
+        }
+        .footer-col h4 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .footer-col p, .footer-col ul {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-col ul li a:hover {
+            color: #d4af37; /* Luxury Gold Accent */
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 0.85rem;
+            color: #777;
+        }
+    </style>
+</body>
+</html>

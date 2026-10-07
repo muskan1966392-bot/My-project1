@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALBERTO | Luxury Timepieces</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico?v=1">
+    <style>
+        /* Footer Custom Styling (Agar aap inline/internal add karna chahein) */
+        .luxury-footer {
+            background-color: #0d0d0d;
+            color: #d4d4d4;
+            padding: 60px 40px 20px 40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-top: 1px solid #222;
+        }
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #222;
+        }
+        .footer-col h4 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .footer-col p, .footer-col ul {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-col ul li a:hover {
+            color: #d4af37; /* Luxury Gold Accent */
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 0.85rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Alberto Logo" style="height: 40px; vertical-align: middle;">
+            <span>ALBERTO</span>
+        </div>
+        <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="pages/collection.html">Collection</a></li>
+        <li><a href="pages/services.html">Services</a></li>
+        <li><a href="pages/about.html">About</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+        <li><a href="pages/cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <span class="hero-subtitle">Timeless Elegance</span>
+        <h1 class="hero-title">Crafted for the <br><span>Exceptional</span></h1>
+        <p class="hero-desc">Discover precision engineering and sophisticated design. Each timepiece from Alberto is a statement of luxury, power, and timeless style.</p>
+        <a href="pages/collection.html" class="cta-btn">Explore Collection</a>
+    </section>
+
+    <section class="features">
+        <div class="feature-box">
+            <h3>Swiss Precision</h3>
+            <p>Engineered with utmost accuracy to ensure flawless performance through every second of your life.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Sapphire Crystal</h3>
+            <p>Protected by scratch-resistant sapphire glass designed to maintain pristine clarity for decades.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Exclusive Craftsmanship</h3>
+            <p>Hand-assembled by master watchmakers using premium grade stainless steel and genuine leather.</p>
+        </div>
+    </section>
+
+    <!-- Enhanced Luxury Footer -->
+    <footer class="luxury-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>ALBERTO</h4>
+                <p>Creating world-class Swiss timepieces defined by unmatched precision, elegance, and timeless luxury.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="pages/collection.html">Collection</a></li>
+                    <li><a href="pages/services.html">Services</a></li>
+                    <li><a href="pages/about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Client Care</h4>
+                <ul>
+                    <li><a href="pages/contact.html">Contact Concierge</a></li>
+                    <li><a href="#">Warranty & Repairs</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <p>Stay updated with our newest limited releases and exclusive collections.</p>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ALBERTO Luxury Watches. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

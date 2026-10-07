@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | ALBERTO</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body{background:#080808;color:#fff;}
+       .cart-container{max-width:1200px;margin:40px auto;padding:0 25px;}
+       .cart-title{font-size:38px;text-align:center;letter-spacing:2px;}
+       .cart-subtitle{color:#777;text-align:center;margin-bottom:35px;}
+       .cart-layout{display:grid;grid-template-columns:1.6fr 0.7fr;gap:35px;}
+       .summary-card{background:#111;border:1px solid #222;border-radius:18px;padding:28px;position:sticky;top:90px;}
+       .summary-row{display:flex;justify-content:space-between;margin:12px 0;color:#999;font-size:14px;}
+       .summary-row.total{border-top:1px solid #222;padding-top:16px;margin-top:16px;color:#fff;font-size:22px;font-weight:800;}
+       .summary-row.total span:last-child{color:#d4af37;}
+       .checkout-btn{width:100%;background:linear-gradient(90deg,#d4af37,#f5e6a3);color:#000;border:none;padding:16px;border-radius:12px;font-weight:900;letter-spacing:1px;margin-top:22px;cursor:pointer;}
+       .checkout-btn:hover{transform:scale(1.02);}
+       .premium-item{display:flex;gap:18px;background:linear-gradient(145deg,#151515,#0e0e0e);border:1px solid #232323;border-radius:18px;padding:18px;margin-bottom:18px;align-items:center;}
+       .premium-item img{width:100px;height:100px;object-fit:cover;border-radius:12px;background:#000;}
+       .premium-item-info{flex:1;}
+       .premium-item-info h4{font-size:17px;margin:0;}
+       .premium-item-info p{color:#d4af37;margin:4px 0;font-weight:700;}
+       .qty-controls{display:flex;align-items:center;gap:10px;margin-top:8px;}
+       .qty-btn{width:30px;height:30px;border:1px solid #333;background:#000;color:#fff;border-radius:8px;cursor:pointer;}
+       .remove-btn{background:none;border:none;color:#ff5a5a;cursor:pointer;font-size:12px;margin-left:15px;}
+       .empty-box{text-align:center;padding:80px 20px;color:#666;}
+        @media(max-width:900px){.cart-layout{grid-template-columns:1fr;}}
+    </style>
+</head>
+<body>
+   <div class="logo">
+            <img src="../images/logo.jpg" alt="Alberto Logo" style="height: 25px; vertical-align: middle;">
+            <span>ALBERTO</span>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="collection.html">Collection</a></li>
+            <a href="services.html">SERVICES</a>
+            <a href="about.html">ABOUT</a>
+            <li><a href="cart.html" class="active">Cart (<span id="cart-count">0</span>)</a></li>
+             <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="cart-container">
+        <h1 class="cart-title">YOUR CART</h1>
+        <p class="cart-subtitle">Luxury is just one step away</p>
+        <div class="cart-layout">
+            <div><div id="cart-items"></div></div>
+            <div>
+                <div class="summary-card">
+                    <h3>Order Summary</h3>
+                    <div class="summary-row"><span>Subtotal</span><span id="subtotal">$0</span></div>
+                    <div class="summary-row"><span>Shipping</span><span style="color:#25d366">Free</span></div>
+                    <div class="summary-row total"><span>Total</span><span id="cart-total">$0</span></div>
+                    <button class="checkout-btn" onclick="checkout()">PROCEED TO CHECKOUT</button>
+                    <p style="text-align:center;color:#555;font-size:11px;margin-top:12px;">🔒 Secure • 2 Year Warranty</p>
+                    <a href="collection.html" style="display:block;text-align:center;margin-top:12px;color:#888;text-decoration:none;font-size:13px;">← Continue Shopping</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+function getCart(){return JSON.parse(localStorage.getItem('myCart'))||[]}
+function saveCart(c){localStorage.setItem('myCart',JSON.stringify(c));updateCount();}
+function updateCount(){let c=getCart();let el=document.getElementById('cart-count');if(el)el.innerText=c.reduce((s,i)=>s+i.qty,0);}
+function updateDisplay(){
+ let cart=getCart();let div=document.getElementById('cart-items');let tot=document.getElementById('cart-total');let sub=document.getElementById('subtotal');
+ if(cart.length===0){div.innerHTML='<div class="empty-box"><h2 style="color:#fff;">Your Cart is Empty</h2><p>Add some watches</p></div>';tot.innerText='$0';sub.innerText='$0';return;}
+ let h='';let t=0;cart.forEach((it,i)=>{t+=it.price*it.qty;h+=`<div class="premium-item"><img src="${it.img}"><div class="premium-item-info"><h4>${it.name}</h4><p>$${it.price}</p><div class="qty-controls"><button class="qty-btn" onclick="changeQty(${i},-1)">-</button><span>${it.qty}</span><button class="qty-btn" onclick="changeQty(${i},1)">+</button><button class="remove-btn" onclick="removeItem(${i})">Remove</button></div></div><div style="font-weight:800">$${it.price*it.qty}</div></div>`});
+ div.innerHTML=h;tot.innerText='$'+t;sub.innerText='$'+t;
+}
+function changeQty(i,d){let c=getCart();c[i].qty+=d;if(c[i].qty<=0)c.splice(i,1);saveCart(c);updateDisplay();}
+function removeItem(i){let c=getCart();c.splice(i,1);saveCart(c);updateDisplay();}
+function checkout(){if(getCart().length===0){alert('Cart empty');return;}alert('Order Placed! Thank you for choosing ALBERTO.');localStorage.removeItem('myCart');updateDisplay();updateCount();}
+updateCount();updateDisplay();
+</script>
+    <footer class="luxury-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>ALBERTO</h4>
+                <p>Creating world-class Swiss timepieces defined by unmatched precision, elegance, and timeless luxury.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="collection.html">Collection</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="cart.html"></a>Cart</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Client Care</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Concierge</a></li>
+                    <li><a href="#">Warranty & Repairs</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <p>Stay updated with our newest limited releases and exclusive collections.</p>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ALBERTO Luxury Watches. All Rights Reserved.</p>
+        </div>
+    </footer>
+     <style>
+        /* Footer Custom Styling (Agar aap inline/internal add karna chahein) */
+        .luxury-footer {
+            background-color: #0d0d0d;
+            color: #d4d4d4;
+            padding: 60px 40px 20px 40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-top: 1px solid #222;
+        }
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #222;
+        }
+        .footer-col h4 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .footer-col p, .footer-col ul {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-col ul li a:hover {
+            color: #d4af37; /* Luxury Gold Accent */
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 0.85rem;
+            color: #777;
+        }
+    </style>
+</body>
+</html>

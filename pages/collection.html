@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection | ALBERTO</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+      <div class="logo">
+            <img src="../images/logo.jpg" alt="Alberto Logo" style="height: 40px; vertical-align: middle;">
+            <span>ALBERTO</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="collection.html" class="active">Collection</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <h1>Exquisite Collection</h1>
+        <p style="color:#d4af37; margin-top:8px;">6 Luxury Timepieces</p>
+    </div>
+
+    <div class="products">
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600&q=80" alt="Watch">
+            <div class="product-name">Royal Black Chrono</div>
+            <div class="product-price">$299</div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1548169874-53e85f753f1e?w=600&q=80" alt="Watch">
+            <div class="product-name">Classic Gold Edition</div>
+            <div class="product-price">$349</div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=600&q=80" alt="Watch">
+            <div class="product-name">Vintage Leather Brown</div>
+            <div class="product-price">$199</div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+      
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&q=80" alt="Watch">
+            <div class="product-name">Pure White Dress</div>
+            <div class="product-price">$259</div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1548171915-e79a380a2a4b?w=600&q=80" alt="Watch">
+            <div class="product-name">Elite Tactical Chrono</div>
+            <div class="product-price">$230</div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+    </div>
+
+     <footer class="luxury-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>ALBERTO</h4>
+                <p>Creating world-class Swiss timepieces defined by unmatched precision, elegance, and timeless luxury.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="collection.html">Collection</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="cart.html"></a>Cart</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Client Care</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Concierge</a></li>
+                    <li><a href="#">Warranty & Repairs</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <p>Stay updated with our newest limited releases and exclusive collections.</p>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ALBERTO Luxury Watches. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="../js/script.js"></script>
+     <style>
+        /* Footer Custom Styling (Agar aap inline/internal add karna chahein) */
+        .luxury-footer {
+            background-color: #0d0d0d;
+            color: #d4d4d4;
+            padding: 60px 40px 20px 40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-top: 1px solid #222;
+        }
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #222;
+        }
+        .footer-col h4 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .footer-col p, .footer-col ul {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-col ul li a:hover {
+            color: #d4af37; /* Luxury Gold Accent */
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 0.85rem;
+            color: #777;
+        }
+    </style>
+</body>
+</html>
